@@ -30,3 +30,32 @@ const sum = nums.reduce((prev, current) => {
 }, 0);
 
 console.log(sum);
+//stellas code
+let names = ["John", "Jane", "Doe", "Smith"];
+names.forEach(function (name,index){
+
+  console.log(index);
+  console.log(name);
+
+})
+
+let cities = ["Nairobi", "Kisumu", "Mombasa", "Nakuru"];
+cities.forEach((city, index) => {
+  console.log(city);
+  console.log(index);
+}); 
+ 
+// .filter method - Filter out specific elements that meet a certain criteria
+  const john = names.filter ((name,index)=>  {
+    if(index % 2 ==0){
+      console.log(name)
+    }
+  }
+  )
+let fullName = names.map ((names) => {
+  console.log(names + " Njau" )
+}) 
+
+let number= [4,6,6,2,0,4,12.17,89,107.240]
+const  numberSum = number.reduce((prev, current) => {
+  })  
