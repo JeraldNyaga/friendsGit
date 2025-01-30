@@ -1,4 +1,5 @@
-let nums = [1, 2, 3, 4, 5];
+{{  
+  let nums = [1, 2, 7, 4, 5];
 nums.forEach(function (num, index) {
   console.log(index);
   console.log(num);
@@ -25,8 +26,41 @@ const addNum = nums2.map((value) => {
 console.log(addNum);
 
 //reduce method used to aggregrate use it to get the sum in an array
-const sum = nums.reduce((prev, current) => {
-  return prev + current;
-}, 0);
+const sum = nums.reduce((prev, current, index) => {
+  prev
+  current;
+  return prev > current ? prev : current;
+});
 
 console.log(sum);
+// Jerald Codes
+let babyNames = ["Junior", "Dorreen", "Njoki", "Njoroge", "Boi", "Ryan"];
+let countryToVisit = ["Singapore", "Cuba", "Jamaica", "Ghana"];
+
+babyNames.forEach(function(name, index){
+  console.log(name);
+  console.log(index);
+});
+
+countryToVisit.forEach((country) => {
+  console.log(country);
+});
+
+babyNames.filter((name, index)=>{
+  if(index % 2 !== 0){
+    console.log(name);
+  }
+});
+
+let fullNames = babyNames.map((name)=>{
+  return name + " Nyaga"
+})
+console.log(fullNames);
+
+const myNumbers = [4,92,1,192, 88, 5, 92, 198, 12, 39, 43];
+
+const bigNum = myNumbers.reduce((prev, next) =>{
+  return prev > next ? prev : next;
+}, 0)
+console.log(bigNum);
+}}
