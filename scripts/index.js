@@ -1,5 +1,5 @@
 {{  
-  let nums = [1, 2, 7, 4, 5];
+let nums = [1, 2, 7, 4, 5];
 nums.forEach(function (num, index) {
   console.log(index);
   console.log(num);
@@ -26,13 +26,14 @@ const addNum = nums2.map((value) => {
 console.log(addNum);
 
 //reduce method used to aggregrate use it to get the sum in an array
-const sum = nums.reduce((prev, current, index) => {
+const sum = nums.reduce((prev, current) => {
   prev
   current;
-  return prev > current ? prev : current;
-});
+  return prev + current;
+}, 0);
 
 console.log(sum);
+
 // Jerald Codes
 let babyNames = ["Junior", "Dorreen", "Njoki", "Njoroge", "Boi", "Ryan"];
 let countryToVisit = ["Singapore", "Cuba", "Jamaica", "Ghana"];
@@ -63,4 +64,24 @@ const bigNum = myNumbers.reduce((prev, next) =>{
   return prev > next ? prev : next;
 }, 0)
 console.log(bigNum);
+
+//Aggregate an array of objects using reduce method
+
+const students =[
+  {name: "Jerald", score: 83},
+  {name: "Kelly", score: 73},
+  {name: "Liam", score: 27},
+  {name: "Stacy", score: 93}
+]
+
+console.log(students.length)
+
+let averageSum = students.reduce((prev, current, index) => {
+  current = students[index]["score"];
+  console.log(current)
+  prev += current / 4;
+  return prev;
+}, 0);
+
+console.log(averageSum);
 }}
